@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KindnessBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --slate-900: #0f172a;
+            --slate-600: #475569;
+            --cyan-accent: #007bff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e8f0fe 100%);
+            color: var(--slate-900);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 4.6rem;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            margin-bottom: 20px;
+            color: var(--slate-900);
+        }
+
+        .text-blue {
+            color: var(--cyan-accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--slate-600);
+            margin-bottom: 45px;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .btn-pill-primary {
+            background-color: var(--cyan-accent);
+            color: white;
+            padding: 16px 42px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 15px rgba(0, 123, 255, 0.12);
+        }
+
+        .btn-pill-primary:hover {
+            background-color: #0056b3;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn-pill-outline {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--slate-600);
+            padding: 16px 42px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            border: 1px solid #d1dee8;
+            transition: all 0.2s ease;
+        }
+
+        .btn-pill-outline:hover {
+            background-color: #ffffff;
+            color: var(--slate-900);
+            border-color: #abbdd3;
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+<body>
+
+    <main class="hero-content">
+        <h1 class="hero-title">
+            Spark <span class="text-blue">Positivity.</span><br>
+            Connect Your Campus.
+        </h1>
+        <p class="hero-subtitle">The digital wall where kindness goes viral.</p>
+
+        <div class="btn-wrapper">
+            <a href="{% url 'register' %}" class="btn-pill-primary">Join the Wall</a>
+            <a href="{% url 'login' %}" class="btn-pill-outline">Sign In</a>
+        </div>
+    </main>
+
+</body>
+</html>
+
